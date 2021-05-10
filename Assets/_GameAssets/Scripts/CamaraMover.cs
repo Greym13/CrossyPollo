@@ -8,18 +8,17 @@ public class CamaraMover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float z = transform.position.z + (distance * Time.deltaTime);
-        transform.position =
-            new Vector3(
-                transform.position.x,
-                transform.position.y,
-                transform.position.z * distance * Time.deltaTime
-                );
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        float z = transform.position.z + (distance * Time.deltaTime);
+        transform.position =
+            new Vector3(
+                transform.position.x,
+                transform.position.y,
+                z);
     }
 }
